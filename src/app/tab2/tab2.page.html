@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      View Category
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-list>
+   <ion-item>
+    <ion-label><b>ID</b></ion-label>
+    <ion-label><b>Name</b></ion-label>
+    <ion-label><b>Description</b></ion-label>
+    <ion-label><b>Status</b></ion-label>
+   </ion-item>
+ </ion-list>
+
+    <ion-list *ngFor="let category of categories">
+      <ion-item-sliding #item>
+      <ion-item  class="item item-text-wrap">
+        <ion-label>{{category.id}}</ion-label>
+        <ion-label><b>{{category.name}}</b></ion-label>
+        <ion-label text-wrap>{{category.date}}</ion-label>
+        <ion-label>{{category.status}}</ion-label>
+      </ion-item>
+    <br>
+      <ion-item-options side="start">
+        <button class="btn btn-warning" (click)="editCategory(category)">Edit</button>
+      </ion-item-options>
+  
+      <ion-item-options side="end">
+        <button class="btn btn-danger" (click)="deleteCategory(category.id)">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

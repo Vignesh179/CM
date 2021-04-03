@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Add Category
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <br>
+  <div class="container">
+    <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Record saved Successfully!</strong>
+      <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div *ngIf="updateMessage" class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Record Updated Successfully!</strong>
+      <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form [formGroup]="categoryForm">
+      <div class="form-group">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Enter Name" [(ngModel)]="categoryName" required>
+      </div><br>
+    </form>
+    <div class="form-group">
+      <label>Status</label>
+      <select [(ngModel)]="categoryStatus" required class="form-control">
+        <option>Active</option>
+        <option>Inactive</option>
+      </select>
+      <br>
+      <label>Description</label>
+      <textarea type="text" [(ngModel)]="categoryDate" class="form-control"  placeholder="Enter Description"
+        required></textarea>
+    </div>
+    <br>
+    <button *ngIf="SaveButton" (click)="saveCategory()"
+      [disabled]="categoryName === '' || categoryStatus.invalid || categoryDate ==''"
+      class="btn btn-dark btn-md">Save</button>&nbsp;
+    <button *ngIf="UpdateButton" (click)="updateCategory()" class="btn btn-warning btn-md">Update</button>&nbsp;
+    <button (click)="resetForm()" class="btn btn-dark btn-md">Reset</button>
+  </div>
+</ion-content>
