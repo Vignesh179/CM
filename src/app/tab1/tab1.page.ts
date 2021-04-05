@@ -86,8 +86,8 @@ export class Tab1Page {
     this.categoryDate = '';
     this.categoryinTime = '';
     this.categoryoutTime = '';
-    this.SaveButton = true
-    this.UpdateButton = false
+    this.SaveButton = true;
+    this.UpdateButton = false;
   }
 //Close Alert
   closeAlert(){
