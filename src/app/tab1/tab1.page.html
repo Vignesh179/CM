@@ -23,19 +23,19 @@
     <form [formGroup]="categoryForm">
       <div class="form-group">
         <label class="form-label">Name</label>
-        <input type="text" class="form-control" formControlName="name" placeholder="Enter Name" [(ngModel)]="categoryName" required>
+        <ion-input type="text" class="form-control" formControlName="name" placeholder="Enter Name" [(ngModel)]="categoryName" required></ion-input>
       </div><br>
     </form>
     <div class="form-group">
       <label>Status</label>
-      <select [(ngModel)]="categoryStatus" required class="form-control">
-        <option>Active</option>
-        <option>Inactive</option>
-      </select>
+      <ion-select [(ngModel)]="categoryStatus" required class="form-control">
+        <ion-select-option>Active</ion-select-option>
+        <ion-select-option>Inactive</ion-select-option>
+      </ion-select>
       <br>
       <label>Description</label>
-      <textarea type="text" [(ngModel)]="categoryDate" class="form-control"  placeholder="Enter Description"
-        required></textarea>
+      <ion-textarea type="text" [(ngModel)]="categoryDate" class="form-control"  placeholder="Enter Description"
+        required></ion-textarea>
     </div>
     <br>
     <button *ngIf="SaveButton" (click)="saveCategory()"
