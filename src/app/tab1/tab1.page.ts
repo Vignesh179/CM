@@ -24,7 +24,9 @@ export class Tab1Page {
     this.SaveButton = true
   }
   categoryForm = new FormGroup({
-    name: new FormControl('', Validators.required)
+    name: new FormControl('', Validators.required),
+    // status: new FormControl(null, [Validators.required]),
+    // date: new FormControl(null, [Validators.required]),
   })
 //Insert
   saveCategory() {
@@ -36,7 +38,12 @@ export class Tab1Page {
       }).then(() => {
         this.loadData();
         this.alert=true;
+        setTimeout(()=>{
+          window.location.reload();
+        },2000);
+        
       })
+      
   }
 //Update
   updateCategory() {
