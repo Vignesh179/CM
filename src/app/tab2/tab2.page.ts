@@ -51,7 +51,7 @@ export class Tab2Page implements OnInit{
   editCategory(category: any) {
     this.UpdateButton = true;
     this.SaveButton = false;
-    this.id = category.id
+    this.id = category.id,
     this.categoryName = category.name,
     this.categoryDate = category.date,
     this.categoryStatus = category.status;
