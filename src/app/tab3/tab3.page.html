@@ -9,8 +9,12 @@
 <ion-content [fullscreen]="true">
  <!-- <ion-input type="file" [(ngModel)]="imagesrc"></ion-input> -->
 
-  <p>Category Master v1.0.0</p>
+  
 
-  <img src="../../assets/img/Desert.jpg" class="img-thumbnail">
+  <ion-input type="file" value="" (change)="fileChange($event)"></ion-input>
+
+<img class="rounded mx-auto d-block" *ngIf="img1" [src]="img1"/>
+
+<p>Category Master v1.0.0</p>
 
 </ion-content>
