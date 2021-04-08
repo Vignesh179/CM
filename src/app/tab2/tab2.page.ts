@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
 import {ApiService} from '../api.service';
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -54,5 +55,9 @@ export class Tab2Page implements OnInit{
     this.categoryName = category.name,
     this.categoryDate = category.date,
     this.categoryStatus = category.status;
+  }
+
+  myfunc(){
+    alert("Hello");
   }
 }
