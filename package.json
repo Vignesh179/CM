@@ -28,6 +28,7 @@
     "@ionic/angular": "^5.5.2",
     "@ionic/storage": "^3.0.4",
     "cordova-plugin-camera": "^5.0.1",
+    "ngx-pagination": "^5.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
