@@ -38,6 +38,8 @@
       <label>Description</label>
       <ion-textarea type="text" [(ngModel)]="categoryDate" class="form-control"  placeholder="Enter Description"
         required></ion-textarea>
+        <label>Upload</label>
+        <ion-input type="file" [(ngModel)]="categoryImg" class="form-control"></ion-input>
     </div>
     <br>
     <button *ngIf="SaveButton" (click)="saveCategory()"
