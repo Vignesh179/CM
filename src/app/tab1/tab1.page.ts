@@ -12,8 +12,7 @@ export class Tab1Page {
   categoryName = '';
   categoryStatus: any;
   categoryDate:any;
-  categoryinTime:any;
-  categoryoutTime:any;
+  categoryImg:any;
   SaveButton: any;
   UpdateButton: any;
   id: any;
@@ -36,6 +35,7 @@ export class Tab1Page {
         name: this.categoryName,
         status: this.categoryStatus,
         date:this.categoryDate,
+        img:this.categoryImg,
       }).then(() => {
         this.loadData();
         this.alert=true;
@@ -92,8 +92,6 @@ export class Tab1Page {
     this.categoryName = '';
     this.categoryStatus = '';
     this.categoryDate = '';
-    this.categoryinTime = '';
-    this.categoryoutTime = '';
     this.SaveButton = true;
     this.UpdateButton = false;
   }
