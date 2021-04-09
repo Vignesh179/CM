@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
 import {ApiService} from '../api.service';
-import { ModalController, NavParams } from '@ionic/angular';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -20,7 +19,7 @@ export class Tab1Page {
   categories: any = [];
   alert:boolean = false;
   updateMessage:boolean= false;
-  constructor(private API: ApiService, private modalCtrl: ModalController) {
+  constructor(private API: ApiService) {
     this.loadData();
     this.SaveButton = true
   }
