@@ -1,31 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
-import {ApiService} from '../api.service';
-
+import { ApiService } from '../api.service';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page implements OnInit{
-
+export class Tab2Page implements OnInit {
   p: number = 1;
   categoryName = '';
   categoryStatus: any;
-  categoryDate:any;
-  categoryinTime:any;
-  categoryoutTime:any;
+  categoryDate: any;
+  categoryinTime: any;
+  categoryoutTime: any;
   SaveButton: any;
   UpdateButton: any;
   id: any;
   categories: any = [];
-  alert:boolean = false;
-  updateMessage:boolean= false;
+  alert: boolean = false;
+  updateMessage: boolean = false;
   constructor(private API: ApiService) {
     this.loadData();
     this.SaveButton = true
   }
-  ngOnInit(){
+  ngOnInit() {
     this.loadData();
   }
   //Fetch
@@ -52,13 +50,11 @@ export class Tab2Page implements OnInit{
     this.UpdateButton = true;
     this.SaveButton = false;
     this.id = category.id,
-    this.categoryName = category.name,
-    this.categoryDate = category.date,
-    this.categoryStatus = category.status;
+      this.categoryName = category.name,
+      this.categoryDate = category.date,
+      this.categoryStatus = category.status;
   }
-
-  myfunc(){
+  myfunc() {
     //alert("Testing");
   }
-  
 }
