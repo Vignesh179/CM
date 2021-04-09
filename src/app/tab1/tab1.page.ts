@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
-import {ApiService} from '../api.service';
+import { ApiService } from '../api.service';
 import { NgxPaginationModule } from 'ngx-pagination';
 @Component({
   selector: 'app-tab1',
@@ -11,13 +11,13 @@ export class Tab1Page {
   p: number = 1;
   categoryName = '';
   categoryStatus: any;
-  categoryDate:any;
+  categoryDate: any;
   SaveButton: any;
   UpdateButton: any;
   id: any;
   categories: any = [];
-  alert:boolean = false;
-  updateMessage:boolean= false;
+  alert: boolean = false;
+  updateMessage: boolean = false;
   constructor(private API: ApiService) {
     this.loadData();
     this.SaveButton = true
@@ -27,46 +27,44 @@ export class Tab1Page {
     // status: new FormControl(null, [Validators.required]),
     // date: new FormControl(null, [Validators.required]),
   })
-//Insert
+  //Insert
   saveCategory() {
     this.API.post('http://localhost/cm/create_category.php',
       {
         name: this.categoryName,
         status: this.categoryStatus,
-        date:this.categoryDate,
+        date: this.categoryDate,
       }).then(() => {
         this.loadData();
-        this.alert=true;
-        setTimeout(()=>{
+        this.alert = true;
+        setTimeout(() => {
           window.location.reload();
-        },2000);
-        
+        }, 2000);
       })
-      
   }
-//Update
+  //Update
   updateCategory() {
     this.API.post(`http://localhost/cm/update_category.php`,
       {
         id: this.id,
         name: this.categoryName,
-        date:this.categoryDate,
+        date: this.categoryDate,
         status: this.categoryStatus,
       }).then(() => {
         this.loadData();
-        this.updateMessage=true;
+        this.updateMessage = true;
       })
   }
-//Edit
+  //Edit
   editCategory(category: any) {
     this.UpdateButton = true;
     this.SaveButton = false;
     this.id = category.id
     this.categoryName = category.name,
-    this.categoryDate = category.date,
-    this.categoryStatus = category.status;
+      this.categoryDate = category.date,
+      this.categoryStatus = category.status;
   }
-//Fetch
+  //Fetch
   async loadData() {
     try {
       var res: any = await this.API.get(`http://localhost/cm/index.php`);
@@ -77,7 +75,7 @@ export class Tab1Page {
       console.log('Error', e);
     }
   }
-//Delete
+  //Delete
   deleteCategory(id: any) {
     if (confirm("Are you sure? You want to remove the record?")) {
       this.API.deleteCategory(id).subscribe(() => {
@@ -85,7 +83,7 @@ export class Tab1Page {
       });
     }
   }
-//Reset
+  //Reset
   resetForm() {
     this.categoryName = '';
     this.categoryStatus = '';
@@ -93,9 +91,9 @@ export class Tab1Page {
     this.SaveButton = true;
     this.UpdateButton = false;
   }
-//Close Alert
-  closeAlert(){
-    this.alert=false;
-    this.updateMessage=false;
+  //Close Alert
+  closeAlert() {
+    this.alert = false;
+    this.updateMessage = false;
   }
 }
