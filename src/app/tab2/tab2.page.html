@@ -10,6 +10,7 @@
     <ion-item>
       <ion-label><b>ID</b></ion-label>
       <ion-label><b>Name</b></ion-label>
+      <ion-label><b>Photo</b></ion-label>
       <ion-label><b>Description</b></ion-label>
       <ion-label><b>Status</b></ion-label>
     </ion-item>
@@ -17,8 +18,14 @@
   <ion-list *ngFor="let category of categories">
     <ion-item-sliding #item>
       <ion-item class="item item-text-wrap">
+       
         <ion-label>{{category.id}}</ion-label>
         <ion-label><b>{{category.name}}</b></ion-label>
+        <ion-label>
+        <ion-avatar>  
+          <img src="../../assets/img/profile.jpg">  
+        </ion-avatar>
+      </ion-label>
         <ion-label text-wrap>{{category.date}}</ion-label>
         <ion-label style="color:green;">{{category.status}}</ion-label>
       </ion-item>
