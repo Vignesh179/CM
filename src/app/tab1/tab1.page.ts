@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../api.service';
-import { NgxPaginationModule } from 'ngx-pagination';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
