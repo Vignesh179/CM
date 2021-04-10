@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import {MatButtonModule} from '@angular/material/button';
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
