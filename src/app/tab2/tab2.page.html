@@ -34,7 +34,7 @@
         <button class="btn btn-warning" (click)="editCategory(category)">Edit</button>
       </ion-item-options>
       <ion-item-options side="end">
-        <button class="btn btn-danger" (click)="deleteCategory(category.id)">Delete</button>
+        <button class="btn btn-danger" ion-button expandable (click)="deleteCategory(category.id)">Delete</button>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
