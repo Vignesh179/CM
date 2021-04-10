@@ -57,4 +57,5 @@ export class Tab2Page implements OnInit {
   myfunc() {
     //alert("Testing");
   }
+
 }
