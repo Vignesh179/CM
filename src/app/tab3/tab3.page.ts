@@ -1,6 +1,5 @@
 import { DomSanitizer } from '@angular/platform-browser';
 import { Component, OnInit, Input, SecurityContext } from '@angular/core';
-// import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
