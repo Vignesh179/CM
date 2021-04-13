@@ -22,8 +22,6 @@ export class Tab1Page {
   }
   categoryForm = new FormGroup({
     name: new FormControl('', Validators.required),
-    // status: new FormControl(null, [Validators.required]),
-    // date: new FormControl(null, [Validators.required]),
   })
   //Insert
   saveCategory() {
