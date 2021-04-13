@@ -12,7 +12,7 @@ export class Tab1Page {
   categoryDate: any;
   SaveButton: any;
   UpdateButton: any;
-  id: any;
+  id:any;
   categories: any = [];
   alert: boolean = false;
   updateMessage: boolean = false;
