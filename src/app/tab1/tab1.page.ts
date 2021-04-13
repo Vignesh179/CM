@@ -57,8 +57,8 @@ export class Tab1Page {
     this.SaveButton = false;
     this.id = category.id
     this.categoryName = category.name,
-      this.categoryDate = category.date,
-      this.categoryStatus = category.status;
+    this.categoryDate = category.date,
+    this.categoryStatus = category.status;
   }
   //Fetch
   async loadData() {
