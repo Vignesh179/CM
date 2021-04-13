@@ -7,7 +7,6 @@ import { ApiService } from '../api.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  p: number = 1;
   categoryName = '';
   categoryStatus: any;
   categoryDate: any;
