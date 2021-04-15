@@ -21,7 +21,7 @@ export class Tab2Page implements OnInit {
   updateMessage: boolean = false;
   constructor(private API: ApiService) {
     this.loadData();
-    this.SaveButton = true
+    this.SaveButton = true;
   }
   ngOnInit() {
     this.loadData();
@@ -33,7 +33,7 @@ export class Tab2Page implements OnInit {
       console.log('Response is ', res);
       this.categories = res;
     } catch (e) {
-      alert("Fetch error")
+      alert("Fetch error");
       console.log('Error', e);
     }
   }
