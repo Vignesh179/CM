@@ -24,18 +24,18 @@
         </div>
         <form [formGroup]="categoryForm">
           <div class="form-group">
-            <label class="form-label" style="color:seagreen">Name</label>
+            <label class="form-label" style="color:seagreen;font-weight: bold;">Name</label>
             <ion-input type="text" class="form-control" formControlName="name" placeholder="Enter Name" [(ngModel)]="categoryName" required></ion-input>
           </div><br>
         </form>
         <div class="form-group">
-          <label style="color:seagreen">Status</label>
+          <label style="color:seagreen;font-weight: bold;">Status</label>
           <ion-select [(ngModel)]="categoryStatus" required class="form-control" placeholder="Select Status">
             <ion-select-option>Active</ion-select-option>
             <ion-select-option>Inactive</ion-select-option>
           </ion-select>
           <br>
-          <label style="color:seagreen">Description</label>
+          <label style="color:seagreen;font-weight: bold;">Description</label>
           <ion-textarea type="text" [(ngModel)]="categoryDate" class="form-control" placeholder="Enter Description"
             required></ion-textarea>
         </div>
