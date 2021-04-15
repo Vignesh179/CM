@@ -17,8 +17,8 @@ export class Tab1Page {
   alert: boolean = false;
   updateMessage: boolean = false;
   constructor(private API: ApiService) {
-    this.loadData();
-    this.SaveButton = true
+  this.loadData();
+  this.SaveButton = true;
   }
   categoryForm = new FormGroup({
     name: new FormControl('', Validators.required),
