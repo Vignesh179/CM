@@ -67,7 +67,7 @@ export class Tab1Page {
       console.log('Response is ', res);
       this.categories = res;
     } catch (e) {
-      alert("Fetch error")
+      alert("Fetch error");
       console.log('Error', e);
     }
   }
