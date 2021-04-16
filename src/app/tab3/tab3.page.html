@@ -8,26 +8,28 @@
 <ion-content [fullscreen]="true">
   <!-- <ion-input type="file" [(ngModel)]="imagesrc"></ion-input> -->
   <ion-input type="file" (change)="fileChange($event)"></ion-input>
-  <img class="rounded mx-auto d-block" *ngIf="img1" [src]="img1" />
+  <!-- <img class="rounded mx-auto d-block" *ngIf="img1" [src]="img1" /> -->
   <p style="text-align: center;">Category Master v1.0.0</p>
   <ion-card style="width: 48%; float: right; border: 2px solid brown;">
     <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card</ion-card-subtitle>
+      <ion-card-title>Card with Image upload Example</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
+      <ion-img [src]="img1"></ion-img>
       Keep close to Nature's heart... and break clear away, once in awhile,
       and climb a mountain or spend a week in the woods. Wash your spirit clean.
     </ion-card-content>
   </ion-card>
   <ion-card style="width: 48%; float: left; border: 2px solid brown;">
     <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card</ion-card-subtitle>
+      <ion-card-title>Card with Image upload Example</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
+      <ion-img [src]="img1"></ion-img>
       Keep close to Nature's heart... and break clear away, once in awhile,
       and climb a mountain or spend a week in the woods. Wash your spirit clean.
     </ion-card-content>
