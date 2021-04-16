@@ -54,8 +54,4 @@ export class Tab2Page implements OnInit {
       this.categoryDate = category.date,
       this.categoryStatus = category.status;
   }
-  myfunc() {
-    //alert("Testing");
-  }
-
 }
