@@ -49,6 +49,11 @@ export class Tab1Page {
       }).then(() => {
         this.loadData();
         this.updateMessage = true;
+        this.categoryName = '';
+        this.categoryStatus = '';
+        this.categoryDate = '';
+        this.SaveButton = true;
+        this.UpdateButton = false;
       })
   }
   //Edit
