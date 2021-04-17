@@ -44,7 +44,8 @@
         <button *ngIf="SaveButton" (click)="saveCategory()"
           [disabled]="categoryName === '' || categoryStatus.invalid || categoryDate ==''"
           class="btn btn-dark btn-md">Save</button>&nbsp;
-        <button *ngIf="UpdateButton" (click)="updateCategory()" class="btn btn-warning btn-md">Update</button>&nbsp;
+        <button *ngIf="UpdateButton" (click)="updateCategory()" class="btn btn-warning btn-md"
+        [disabled]="categoryName === '' || categoryStatus.invalid || categoryDate ==''">Update</button>&nbsp;
         <button (click)="resetForm()" class="btn btn-dark btn-md">Reset</button>
       </div>
       <div class="col">
