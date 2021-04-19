@@ -41,12 +41,12 @@ export class Tab1Page {
   //Update
   updateCategory() {
     this.API.post(`http://localhost/cm/update_category.php`,
-      {
-        id: this.id,
-        name: this.categoryName,
-        date: this.categoryDate,
-        status: this.categoryStatus,
-      }).then(() => {
+    {
+      id: this.id,
+      name: this.categoryName,
+      date: this.categoryDate,
+      status: this.categoryStatus,
+    }).then(() => {
         this.loadData();
         this.updateMessage = true;
         this.categoryName = '';
