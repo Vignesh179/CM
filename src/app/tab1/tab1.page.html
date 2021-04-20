@@ -9,7 +9,9 @@
   <br>
   <div class="container">
     <div class="row">
-      <div class="col" style="border: 1px solid black;padding: 10px;">
+      <div class="col" style="padding: 20px; background: #FFAFBD;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;">
         <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
           <strong>Record saved Successfully!</strong>
           <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -24,19 +26,19 @@
         </div>
         <form [formGroup]="categoryForm">
           <div class="form-group">
-            <label class="form-label" style="color:rgb(8, 151, 70);font-weight: bold;">Name</label>
+            <label class="form-label" style="color:black;font-weight: bold;">Name</label>
             <ion-input type="text" class="form-control" formControlName="name" placeholder="Enter Name"
               [(ngModel)]="categoryName" required></ion-input>
           </div><br>
         </form>
         <div class="form-group">
-          <label style="color:rgb(8, 151, 70);font-weight: bold;">Status</label>
+          <label style="color:black;font-weight: bold;">Status</label>
           <ion-select [(ngModel)]="categoryStatus" required class="form-control" placeholder="Select Status">
             <ion-select-option>Active</ion-select-option>
             <ion-select-option>Inactive</ion-select-option>
           </ion-select>
           <br>
-          <label style="color:rgb(8, 151, 70);font-weight: bold;">Description</label>
+          <label style="color:black;font-weight: bold;">Description</label>
           <ion-textarea type="text" [(ngModel)]="categoryDate" class="form-control" placeholder="Enter Description"
             required></ion-textarea>
         </div>
@@ -48,7 +50,10 @@
         [disabled]="categoryName === '' || categoryStatus.invalid || categoryDate ==''">Update</button>&nbsp;
         <button (click)="resetForm()" class="btn btn-dark btn-md">Reset</button>
       </div>
-      <div class="col" style="border: 1px solid black;padding: 10px; margin-left: 10px;">
+      <div class="col" style="padding: 10px; margin-left: 10px;background: #ee9ca7;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      ">
         <h2 style="text-align: center;">Swipe right to <code>Edit</code> & Swipe left to <code>Delete</code>!</h2>
         <ion-list>
           <ion-item>
