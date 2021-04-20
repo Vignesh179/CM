@@ -8,10 +8,10 @@ import { Component, OnInit, Input, SecurityContext } from '@angular/core';
 export class Tab3Page {
   imagesrc: any;
   img1: any;
-  constructor(private sanitizer: DomSanitizer) { }
-  imagee() {
-    this.sanitizer.sanitize(SecurityContext.STYLE, 'url(' + this.imagesrc + ')');
-  }
+  constructor() { }
+//   imagee() {
+//     this.sanitizer.sanitize(SecurityContext.STYLE, 'url(' + this.imagesrc + ')');
+//   }
   fileChange(event) {
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
