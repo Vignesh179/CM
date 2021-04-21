@@ -12,7 +12,7 @@
       <div class="col" style="padding: 20px; background: #FFAFBD;  /* fallback for old browsers */
       background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;">
-        <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
           <strong>Record saved Successfully!</strong>
           <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -56,7 +56,7 @@
       ">
         <h2 style="text-align: center;">Swipe right to <code>Edit</code> & Swipe left to <code>Delete</code>!</h2>
         <ion-list>
-          <ion-item style="text-transform: uppercase; font-weight: bold;">
+          <ion-item style="text-transform: uppercase; font-weight: bold;font-size: large;">
             <ion-label style="color:rgb(8, 151, 70)"><code>ID</code></ion-label>
             <ion-label style="color:rgb(8, 151, 70)"><code>Name</code></ion-label>
             <ion-label style="color:rgb(8, 151, 70)"><code>Description</code></ion-label>
