@@ -28,26 +28,26 @@
           <div class="form-group">
             <label class="form-label" style="color:black;font-weight: bold;">Name</label>
             <ion-input type="text" class="form-control" formControlName="name" placeholder="Enter Name"
-              [(ngModel)]="categoryName" required></ion-input>
+              [(ngModel)]="categoryName" required style="border: 1px solid black;"></ion-input>
           </div><br>
         </form>
         <div class="form-group">
           <label style="color:black;font-weight: bold;">Status</label>
-          <ion-select [(ngModel)]="categoryStatus" required class="form-control" placeholder="Select Status">
+          <ion-select [(ngModel)]="categoryStatus" required class="form-control" placeholder="Select Status" style="border: 1px solid black;">
             <ion-select-option>Active</ion-select-option>
             <ion-select-option>Inactive</ion-select-option>
           </ion-select>
           <br>
           <label style="color:black;font-weight: bold;">Description</label>
           <ion-textarea type="text" [(ngModel)]="categoryDate" class="form-control" placeholder="Enter Description"
-            required></ion-textarea>
+            required style="border: 1px solid black;"></ion-textarea>
         </div>
         <br>
         <button *ngIf="SaveButton" (click)="saveCategory()"
           [disabled]="categoryName === '' || categoryStatus.invalid || categoryDate ==''"
-          class="btn btn-dark btn-md">Save</button>&nbsp;
+          class="btn btn-dark btn-md" style="border: 1px solid black;">Save</button>&nbsp;
         <button *ngIf="UpdateButton" (click)="updateCategory()" class="btn btn-warning btn-md"
-        [disabled]="categoryName === '' || categoryStatus.invalid || categoryDate ==''">Update</button>&nbsp;
+        [disabled]="categoryName === '' || categoryStatus.invalid || categoryDate ==''" style="border: 1px solid black;">Update</button>&nbsp;
         <button (click)="resetForm()" class="btn btn-dark btn-md">Reset</button>
       </div>
       <div class="col" style="padding: 10px; margin-left: 10px;background: #ee9ca7;  /* fallback for old browsers */
